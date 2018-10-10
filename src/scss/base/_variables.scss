@@ -1,0 +1,41 @@
+// Breakpoints
+$break_tablet: 768px;
+$break_desktop: 1250px;
+
+// Layout
+$grid-column-gutter: (
+    small: 8px,
+    medium: 12px,
+    large: 16px
+);
+
+// Colours
+$c-gold-desaturated: #cda841;
+$c-gold-buttons: #c9a131;
+$c-gold-buttons-hover: #ac810d;
+$c-gold-headlines: #cc9900;
+$c-gold-links: #f8bd0c;
+$c-gold-icons: #dab33e; 
+$c-gold-border: #c89f2d;
+$c-f-gray: #4c4c4c;
+$bg-dark-gray: #191919;
+
+$bg-offcanvas: rgb(243, 243, 243);
+
+// Typo
+$f-primary: 'Yeseva One', cursive;
+$f-secondary: 'Lato', sans-serif;
+
+$fs-nav: 21px;
+$fs-mainheadline: 90px;
+$fs-sectionheadline: 36px;
+$fs-priceheadline: 21px;
+$fs-plaintext: 16px;
+$fs-discount: 14px;
+
+$fs-headbuttons: 18px;
+
+$fs-formlabel: 14px;
+
+$fs-quoteauthor: 18px;
+$fs-quote: 25px;

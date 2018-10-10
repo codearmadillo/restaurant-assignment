@@ -1,0 +1,36 @@
+footer.page-footer {
+    background-color: $bg-dark-gray;
+    padding: 52px 0;
+    
+    &, & * {
+        color: #fff;
+    }
+    & h3 {
+        font-size: $fs-nav;
+    }
+    & {
+        h3 {
+            font-size: $fs-nav;
+        }
+        p, ul, li {
+            font-size: $fs-plaintext;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            margin: 0; padding: 0;
+        }
+    }
+
+    .row article {
+        &:not(:last-of-type){
+            margin-bottom: 25px;
+        }
+
+        @include breakpoint('tablet'){
+            &, &:not(:last-of-type){
+                margin-bottom: unset;
+            }
+        }
+    }
+}

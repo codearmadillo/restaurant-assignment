@@ -1,0 +1,17 @@
+.page-about {
+    text-align: center;
+    height: auto;
+
+    @include gradient-pattern('pattern.wave.png');
+
+    p {
+        margin-bottom: 53px;
+    }
+
+    .about {
+        &__placeholder {
+            max-height: 450px;
+            width: auto;
+        }
+    }
+}

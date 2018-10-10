@@ -1,0 +1,42 @@
+// Uses mobile first approach
+@mixin breakpoint($rule){
+    @if $rule == 'tablet' {
+        @media (min-width: $break_tablet) { @content ; }
+    }
+    @else if $rule == 'desktop' {
+        @media (min-width: $break_desktop) { @content ; }
+    }
+}
+
+@mixin offsets($column-count, $prefix){
+    @for $i from 1 through $column-count {
+        .offset-#{$prefix}-#{$i} {
+            margin-left: $i * (100% / $column-count);
+        }
+    }
+}
+
+@mixin grid($column-count, $prefix){
+    @for $i from 1 through $column-count {
+        .col-#{$prefix}-#{$i} {
+            position: relative;
+            display: initial;
+            width: $i * (100% / $column-count);
+            min-width: $i * (100% / $column-count);
+            max-width: $i * (100% / $column-count);
+            margin-left: 0;
+        }
+    }
+    .#{$prefix}-hidden {
+        display: none;
+    }
+}
+
+@mixin gradient-pattern($pattern) {
+    background: rgb(255,255,255); // Colour fallback
+    background-image: url('../assets/images/#{$pattern}'); // Image fallback
+    background-image: url('../assets/images/#{$pattern}'), -moz-linear-gradient(-45deg, rgba(255,255,255,1) 0%, rgba(232,232,232,1) 100%);
+    background-image: url('../assets/images/#{$pattern}'), -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
+    background-image: url('../assets/images/#{$pattern}'), linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 );
+}

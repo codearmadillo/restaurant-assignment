@@ -1,0 +1,53 @@
+.page-reviews {
+    background-image: url('../assets/images/background.reviews.lowres.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include breakpoint('desktop'){
+        background-image: url('../assets/images/background.reviews.jpg');
+    }
+
+    header, p, footer {
+        text-align: center;
+        color: #fff;
+        padding: 0 80px;
+
+        background-color: rgba(0, 0, 0, 0.67);
+
+        @include breakpoint('desktop'){
+            background-color: transparent;
+            background-image: url('../assets/images/pattern.reviews.png');
+        }
+    }
+    footer {
+        padding-top: 45px;  
+        padding-bottom: 85px;
+    }
+    header {
+        padding-bottom: 17px;   
+    }
+
+    .review {
+        &__headline{
+            margin: 0;
+            padding-top: 85px;
+            font-size: 34px;
+            color: #fff;
+        }
+        &__body{
+            margin: 0;
+            font-size: $fs-quote;
+            line-height: 45px;
+        }
+        &__author{
+            color: #fff;
+            font-size: $fs-quoteauthor;
+
+            &::before{
+                content: '- ';
+                color:  #fff;
+            }
+        }
+    }
+}

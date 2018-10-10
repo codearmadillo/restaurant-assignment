@@ -1,0 +1,65 @@
+.page-menu{
+    @include gradient-pattern('pattern.hexagon.png');
+}
+
+.menu {
+    &__item{
+        position: relative;
+        float: left;
+        padding: 12px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__category {
+        header {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+} 
+.item{
+    &__headline,
+    &__price,
+    &__description{
+        display: block;
+        float: left;
+    }
+    &__headline,
+    &__price{
+        width: 50%;
+        border-bottom: 1px solid $c-gold-desaturated;
+        padding-bottom: 12px;
+        margin: 0;
+    }
+    &__price{
+        text-align: right;
+
+        &::before{
+            content: '$ ';
+        }
+    }
+    &__description{
+        width: 100%;
+        margin: 12px 0 0;
+    }
+    &--promoted{
+        border: 1px solid $c-gold-desaturated;
+
+        &::before{
+            content: 'Special';
+            display: block;
+            position: absolute;
+            background-color: $c-gold-desaturated;
+            color: #fff;
+            padding: 0 12px;
+            line-height: 21px;
+            font-size: $fs-discount;
+
+            top: -21px;
+            right: -1px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+h1, h2, h3,
+h4, h5, h6 {
+    color: $c-gold-headlines;
+    font-family: $f-primary;
+}
+
+h1 {
+    font-size: $fs-mainheadline;
+}
+
+// Decorative elements
+.headline--decor {
+    text-align: center;
+
+    &::after{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        width: 240px;
+        height: 25px;
+        margin-top: 15px;
+
+        content: '';
+
+        -webkit-mask-image: url('../assets/images/element.svg');
+        mask-image: url('../assets/images/element.svg');
+        -webkit-mask-size: 100% auto;
+        mask-size: 100% auto;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position-y: center;
+        mask-position-y: center;
+
+        background-color: $c-gold-headlines;
+    }
+
+    &-white {
+        &::after{
+            background-color: rgb(235, 235, 235);
+        }
+    }
+    &-small {
+        &::after{
+            width: 200px;
+            height: 19px;
+        }
+    }
+}
+h2, h3 {
+    margin-top: 0;
+}
+p,
+ul, ol, li,
+span,
+textarea, input, select, option {
+    font-family: $f-secondary;
+    color: $c-f-gray;
+}
+label {
+    font-weight: bold;
+    font-family: $f-secondary;
+    color: $c-gold-headlines;
+}
+a:not(.btn){
+    color: $c-gold-links;
+    font-weight: bold;
+}

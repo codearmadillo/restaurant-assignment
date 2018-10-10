@@ -1,0 +1,45 @@
+.page-ingredients {
+    background-image: url('../assets/images/background.ingredients.lowres.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include breakpoint('desktop'){
+        background-image: url('../assets/images/background.ingredients.jpg');
+    }
+}
+
+.ingredients{
+    &__block{
+        background-color: rgba(0, 0, 0, .67);
+        padding: 75px 0;
+        text-align: center;
+    }
+    &__headline,
+    &__body{
+        padding: 0 70px;
+        color: #fff;
+    }
+    &__body{
+        margin-bottom: 75px;
+    }
+    &__item{
+        display: inline-block;
+        width: 110px;
+        height: 110px;
+        border-radius: 55px;
+
+        border: 5px solid rgba(255, 255, 255, .09);
+
+        &:nth-child(2){
+            margin: 0 7px;
+
+            @include breakpoint('tablet'){
+                margin: 0 15px;
+            }
+            @include breakpoint('desktop'){
+                margin: 0 30px;
+            }
+        }
+    }
+}

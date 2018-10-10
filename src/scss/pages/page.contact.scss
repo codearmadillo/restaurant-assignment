@@ -1,0 +1,79 @@
+.page-contact{
+    @include gradient-pattern('pattern.wave.png');
+
+    .row > div{
+        position: relative;
+        padding: 0;
+
+        &:first-of-type {
+            padding-right: 15px;
+        }
+        &:nth-of-type(2) {
+            padding-left: 15px;
+        }
+        &:last-of-type {
+            text-align: center;
+        }
+    }
+    p {
+        text-align: center;
+    }
+    input:not([type="submit"]), .selectbox, select{
+        position: relative;
+        line-height: 34px; height: 34px;
+        padding: 0 16px;
+        max-width: 100%;
+        width: 100%;
+
+        background-color: #f8f9f9;
+        border: 1px solid #c8c6c6;
+        font-size: 16px;
+
+        &:focus {
+            border-color: $c-gold-border;
+            outline: none;
+        }
+
+        margin-bottom: 26px;
+    }
+    input[type="submit"]{
+        width: 100%;
+        border: none;
+        line-height: 36px;
+        color: #fff;
+
+        @include breakpoint('tablet'){
+            width: 50%;
+            max-width: 260px;
+        }
+    }
+    label {
+        float: left;
+        font-size: $fs-formlabel;
+        color: $c-gold-headlines;
+        font-weight: bold;
+        padding-bottom: 8px;
+        width: 100%;
+    }
+
+}
+
+.contact{
+    &__placeholder {
+        position: relative;
+        overflow: hidden;
+
+        & img{
+            position: absolute;
+            top: 0; bottom: 0;
+            object-fit: contain;
+            
+            &:first-of-type{
+                left: 0; right: 15px;
+            }
+            &:last-of-type{
+                left: 15px; right: 0;
+            }
+        }
+    }
+}

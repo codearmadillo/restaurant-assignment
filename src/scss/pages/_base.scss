@@ -1,0 +1,26 @@
+.page{
+    &-header,
+    &-promo,
+    &-introduction,
+    &-about,
+    &-ingredients,
+    &-menu,
+    &-reviews,
+    &-contact,
+    &-footer{
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    &-about,
+    &-ingredients,
+    &-menu,
+    &-reviews,
+    &-contact{
+        padding: 65px 0;
+
+        @include breakpoint('desktop'){
+            padding: 100px 0;
+        }
+    }
+}

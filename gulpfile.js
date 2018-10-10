@@ -19,12 +19,12 @@ var gulp = require('gulp'),
         javascript: Array('src/js/settings.js', 'src/js/main.js', 'src/js/**/*.js')
     }
     output = {
-        stylesheet: 'dist/build/',
-        javascript: 'dist/build/'
+        stylesheet: 'dist/',
+        javascript: 'dist/'
     },
     production = {
-        stylesheet: 'dist/production/',
-        javascript: 'dist/production/'
+        stylesheet: 'production/',
+        javascript: 'production/'
     },
     watch = {
         stylesheet: 'src/scss/**/*.scss',

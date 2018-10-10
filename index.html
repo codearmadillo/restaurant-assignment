@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="dist/default.css" />
+        <link rel="stylesheet" href="production/default.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
     </head>
@@ -13,12 +13,12 @@
                 </header>
                 <article class="offcanvas__navigation">
                     <ul class="nav nav--offcanvas">
-                        <li><a href="#" title="">Home</a></li>
-                        <li><a href="#" title="">About</a></li>
-                        <li><a href="#" title="">Ingredients</a></li>
-                        <li><a href="#" title="">Menu</a></li>
-                        <li><a href="#" title="">Reviews</a></li>
-                        <li><a href="#" title="">Reservation</a></li>
+                        <li><a class="offcanvas-link" href="#introduction" title="Home">Home</a></li>
+                        <li><a class="offcanvas-link" href="#about" title="About">About</a></li>
+                        <li><a class="offcanvas-link" href="#ingredients" title="Ingredients">Ingredients</a></li>
+                        <li><a class="offcanvas-link" href="#menu" title="Menu">Menu</a></li>
+                        <li><a class="offcanvas-link" href="#reviews" title="Reviews">Reviews</a></li>
+                        <li><a class="offcanvas-link" href="#contact" title="Reservation">Reservation</a></li>
                     </ul>
                 </article>
                 <footer class="offcanvas__about">
@@ -41,12 +41,12 @@
                                 <li><a href="javascript:void();" title=""><i class="fab fa-facebook-f"></i></a></li>
                             </ul>
                             <ul class="nav nav--main">
-                                <li><a href="#" title="">Home</a></li>
-                                <li><a href="#" title="">About</a></li>
-                                <li><a href="#" title="">Ingredients</a></li>
-                                <li><a href="#" title="">Menu</a></li>
-                                <li><a href="#" title="">Reviews</a></li>
-                                <li><a href="#" title="">Reservation</a></li>
+                                <li><a href="#introduction" title="Home">Home</a></li>
+                                <li><a href="#about" title="About">About</a></li>
+                                <li><a href="#ingredients" title="Ingredients">Ingredients</a></li>
+                                <li><a href="#menu" title="Menu">Menu</a></li>
+                                <li><a href="#reviews" title="Reviews">Reviews</a></li>
+                                <li><a href="#contact" title="Reservation">Reservation</a></li>
 
                                 <li class="navigation-controls"><span onclick="offcanvas.toggle('main');" class="navigation-icon navigation-icon--light navigation-icon--open"></span></li>
                             </ul>
@@ -286,6 +286,11 @@
                 </div>
             </div>
         </footer>
-        <script src="dist/bundle.js" type="text/javascript" ></script>
+        <script src="production/bundle.js" type="text/javascript" ></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                offcanvas.init();
+            });
+        </script>
     </body>
 </html>
